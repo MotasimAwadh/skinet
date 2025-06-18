@@ -54,8 +54,8 @@ public class ProductRepository(StoreContext context) : IProductRepository
                 _ => query.OrderBy(u => u.Name)
             };
         }
-
-        return await query.ToListAsync();
+        //                 for pagination
+        return await query.Skip(5).Take(5).ToListAsync();
     }
 
     public bool ProductExists(int id)

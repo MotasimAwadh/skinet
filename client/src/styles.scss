@@ -4,8 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-$customTheme: mat.define-theme(); // issue here
-// error message: '' was found but does not resolve to a valid theme value.
+$customTheme: mat.define-theme();
 
 @include mat.core();
 
@@ -19,4 +18,8 @@ $customTheme: mat.define-theme(); // issue here
     .mdc-flat-button {
         @apply rounded-md
     }
+}
+
+.container {
+    @apply mx-auto max-w-screen-xl
 }
